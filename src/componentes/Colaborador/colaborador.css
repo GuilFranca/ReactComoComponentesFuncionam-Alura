@@ -1,4 +1,5 @@
 .colaborador {
+    position: relative; /* O position absolute utiliza o relative como base */  
     width: 280px;
 }
 
@@ -34,4 +35,11 @@
     line-height: 22px;
     color: #212121;
     padding: 0 16px;
+}
+
+.deletar {
+    position: absolute; /* Define a class com a posição absoluta com base na class pai relative */
+    right: -10px;
+    top: -10px;
+    cursor: pointer;
 }
