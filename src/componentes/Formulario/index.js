@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Botao from '../Botao'
-import CampoTexto from '../CampoTexto'
+import Campo from '../Campo'
 import ListaSuspensa from '../ListaSuspensa'
 import './formulario.css'
 
@@ -29,19 +29,19 @@ const Formulario = ({ aoCriarTime, aoCadastrar, times }) => {
         <section className="formulario-container">
             <form className="formulario" onSubmit={aoSubmeter}>
                 <h2>Preencha os dados para criar o card do colaborador.</h2>
-                <CampoTexto
+                <Campo
                     obrigatorio={true}
                     label='Nome'
                     placeholder='Digite seu nome '
                     valor={nome}
                     aoAlterado={valor => setNome(valor)} />
-                <CampoTexto
+                <Campo
                     obrigatorio={true}
                     label='Cargo'
                     placeholder='Digite seu cargo '
                     valor={cargo}
                     aoAlterado={valor => setCargo(valor)} />
-                <CampoTexto
+                <Campo
                     label='Imagem'
                     placeholder='Informe o endereço da imagem '
                     aoAlterado={valor => setImagem(valor)} />
@@ -59,17 +59,18 @@ const Formulario = ({ aoCriarTime, aoCadastrar, times }) => {
                 aoCriarTime({ nome: nomeTime, cor: corTime });
                 }}>
                 <h2>Preencha os dados para criar a área de time.</h2>
-                <CampoTexto
+                <Campo
                     obrigatorio={true}
                     label='Nome'
                     placeholder='Digite o nome do time'
                     valor={nomeTime}
                     aoAlterado={valor => setNomeTime(valor)}
                 />
-                <CampoTexto
+                <Campo
+                    type='color'
                     obrigatorio={true}
                     label='Cor'
-                    placeholder='Difite a cor do background'
+                    placeholder='Defina a cor do background'
                     valor={corTime}
                     aoAlterado={valor => setCorTime(valor)}
                 />

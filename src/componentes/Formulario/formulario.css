@@ -2,15 +2,29 @@
     display: flex;
     justify-content: center;
     margin: 80px 0;
-
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+    /* Faz com que os elementos se alinhem ao topo */
 }
+
 .formulario-container .formulario {
-    max-width: 80%;
+    /* max-width: 80%; */
     background: #F7F7F7;
     box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.08);
     border-radius: 20px;
     padding: 36px 64px;
+    /* width: 500px; */
+    height: auto;
+    flex: 1; /* Cada elemento ocupa espaço igual */
 }
+
+@media screen and (max-width: 768px) {
+    .formulario-container .formulario {
+        max-width: 65%;
+    }
+}
+
 .formulario-container .formulario h2 {
     font-weight: 400;
     font-size: 32px;
