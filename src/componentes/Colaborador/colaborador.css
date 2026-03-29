@@ -43,3 +43,14 @@
     top: -10px;
     cursor: pointer;
 }
+
+.favoritar {
+    cursor: pointer;
+    margin-top: 20PX;
+
+    /* Tirar a seleção da imagem após vários cliques rápidos */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE10+/Edge */
+    user-select: none;
+}
